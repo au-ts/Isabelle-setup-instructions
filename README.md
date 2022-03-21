@@ -36,7 +36,7 @@ Decide where you want your verification repo to exist. For me, it's `~/repos/`, 
 ```
 mkdir verification
 cd verification
-repo init -u https://git@github.com/seL4/verification-manifest.git
+repo init -m devel.xml -u ssh://git@github.com/seL4/verification-manifest.git
 repo sync
 ```
 The `repo init` command should ask you some questions about your identity and colours. `repo sync` will download about 3.5GB of data, so might take a while.
