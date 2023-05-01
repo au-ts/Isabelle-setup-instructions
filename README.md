@@ -21,9 +21,11 @@ repo
 If the last command results in `error: repo is not installed. Use "repo init" to install it here` then everything worked as it should.
 
 ## Launching
-The launch command that I found most useful for my particular work was the following, which I put in an executable `isabelle.sh` in my user directory. This runs everything under the ARM architecture.
+The launch command that I found most useful for my particular work was the following, which I put in an executable `isabelle.sh` in my user directory. This runs everything under the RISCV64 architecture.
+
+If you want to work on, for example, InfoFlow, you can launch with every image *leading up to* InfoFlow by using `-R InfoFlow` (as opposed to `-l InfoFlow`, which would start from the completed InfoFlow image).
 ```
-L4V_ARCH=ARM ~/repos/verification/isabelle/bin/isabelle jedit -d ~/repos/verification/l4v -l Lib&
+L4V_ARCH=RISCV64 ~/repos/verification/isabelle/bin/isabelle jedit -d ~/repos/verification/l4v -l Lib&
 ```
 
 ## Make
