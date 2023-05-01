@@ -26,6 +26,19 @@ The launch command that I found most useful for my particular work was the follo
 L4V_ARCH=ARM ~/repos/verification/isabelle/bin/isabelle jedit -d ~/repos/verification/l4v -l Lib&
 ```
 
+## Make
+I use the following command to build images.
+
+The `_QUICK_AND_DIRTY` flags are only needed if you're building (or relying upon) images with sorries in them.
+
+The `-j 7` defines the number of cores to be used for the build (I use one less than my machine's total)
+
+Obviously you want to change `L4V_ARCH` to whatever architecture you're building for.
+
+```
+L4V_ARCH=RISCV64 AINVS_QUICK_AND_DIRTY=true ACCESS_QUICK_AND_DIRTY=true INFOFLOW_QUICK_AND_DIRTY=true make InfoFlow -j 7
+```
+
 ## jEdit colours
 
 ![Image of jedit with nice colours](Isabelle_colours_screenshot.png)
